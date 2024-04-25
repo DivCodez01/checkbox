@@ -5,10 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(129, 129, 129);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: baseline;
+            align-items: center;
+            text-align: start;
+        }
+
+        input {
+            margin: 20px 0 10px 0;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            width: 45%;
+            padding: 5px;
+            border-radius: 9px;
+        }
+
+        div h4 {
+            margin: 0 0 15px 0;
+            position: relative;
+            left: -70px;
+            background-color: white;
+            width: 100%;
+            padding: 4px;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="text" placeholder="Choose your education level...">
+    <input type="text" placeholder="Choose your education level..." id="input-el">
+    <div>
+        <h4>Primary level</h4>
+        <h4>Oridinary certifivcate</h4>
+        <h4>Advanced diproma</h4>
+        <h4>A1 diproma</h4>
+        <h4>Bachelor degree</h4>
+    </div>
 </body>
 
 </html>
