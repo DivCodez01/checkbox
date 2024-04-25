@@ -33,13 +33,32 @@
             border-radius: 9px;
         }
 
+        div {
+            width: 45%;
+            visibility: hidden;
+        }
+
         div h4 {
             margin: 0 0 15px 0;
-            position: relative;
-            left: -70px;
             background-color: white;
             width: 100%;
             padding: 4px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        div h4:hover {
+            background-color: black;
+            color: white;
+        }
+
+        div h4:active {
+            opacity: .3;
+        }
+
+        label {
+            position: absolute;
+            display: none;
         }
     </style>
 </head>
@@ -47,12 +66,39 @@
 <body>
     <input type="text" placeholder="Choose your education level..." id="input-el">
     <div>
-        <h4>Primary level</h4>
-        <h4>Oridinary certifivcate</h4>
-        <h4>Advanced diproma</h4>
-        <h4>A1 diproma</h4>
-        <h4>Bachelor degree</h4>
+        <h4 id="h4El-one">Primary level</h4>
+        <h4 id="h4El-two">Oridinary certifivcate</h4>
+        <h4 id="h4El-three">Advanced diproma</h4>
+        <h4 id="h4El-four">A1 diproma</h4>
+        <h4 id="h4El-five">Bachelor degree</h4>
     </div>
+    <label>1</label>
+    <script>
+        const h4ElOne = document.getElementById("h4El-one");
+        const h4ElTwo = document.getElementById("h4El-two");
+        const h4ElThree = document.getElementById("h4El-three");
+        const h4ElFour = document.getElementById("h4El-four");
+        const h4ElFive = document.getElementById("h4El-five");
+        const divisionEls = document.querySelector("div");
+        const inputEl = document.getElementById("input-el");
+        const label = document.querySelector("label");
+        let count = 0;
+        inputEl.addEventListener("click", function () {
+            count += 1;
+            label.innerHTML = count;
+            if (label.innerHTML % 2 == 1) {
+                divisionEls.style.visibility = "visible";
+            } else {
+                divisionEls.style.visibility = "hidden";
+            }
+
+        });
+
+        h4ElOne.addEventListener("click", function () {
+            inputEl.value = h4ElOne.innerHTML + " is choosen";
+            divisionEls.style.visibility = "hidden";
+        })
+    </script>
 </body>
 
 </html>
