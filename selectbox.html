@@ -74,6 +74,7 @@
     </div>
     <label>1</label>
     <script>
+        document.title = "Choose your degree"
         const h4ElOne = document.getElementById("h4El-one");
         const h4ElTwo = document.getElementById("h4El-two");
         const h4ElThree = document.getElementById("h4El-three");
@@ -95,9 +96,29 @@
         });
 
         h4ElOne.addEventListener("click", function () {
-            inputEl.value = h4ElOne.innerHTML + " is choosen";
+            inputEl.value = h4ElOne.innerHTML;
             divisionEls.style.visibility = "hidden";
-        })
+        });
+
+        h4ElTwo.addEventListener("click", function () {
+            inputEl.value = h4ElTwo.innerHTML;
+            divisionEls.style.visibility = "hidden";
+        });
+
+        h4ElThree.addEventListener("click", function () {
+            inputEl.value = h4ElThree.innerHTML;
+            divisionEls.style.visibility = "hidden";
+        });
+
+        h4ElFour.addEventListener("click", function () {
+            inputEl.value = h4ElFour.innerHTML;
+            divisionEls.style.visibility = "hidden";
+        });
+
+        h4ElFive.addEventListener("click", function () {
+            inputEl.value = h4ElFive.innerHTML;
+            divisionEls.style.visibility = "hidden";
+        });
     </script>
 </body>
 
