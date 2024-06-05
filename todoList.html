@@ -40,6 +40,7 @@
     <script>
         const input = document.getElementsByTagName("input");
         const button = document.querySelector("button");
+        const inputsValued = document.getElementsByTagName("div");
 
         const todoElms = [
             {
@@ -49,7 +50,14 @@
             {
                 name: "make dinner",
                 dueDate: "2024-04-03"
-            }]
+            }];
+
+        const todoListElms = (todoList) => {
+            for (let i = 0; i < todoList.length; i++) {
+                let name = todoList[i].name;
+                let dueDate = todoList[i].dueDate;
+            }
+        }
     </script>
 </body>
 
