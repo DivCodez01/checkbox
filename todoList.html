@@ -89,11 +89,14 @@
             let name = input[0].value;
             let dueDate = input[1].value;
 
-            if (name) {
+            if (name && dueDate) {
                 todoElms.push({ name: name, dueDate: dueDate });
                 console.log(todoElms)
             }
             todoListElms(todoElms)
+
+            input[0].value = "";
+            dueDate = input[1].value = "";
         })
     </script>
 </body>
