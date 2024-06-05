@@ -73,7 +73,12 @@
                 inputValue = inputValue + 10;
                 calvalue[2].innerHTML = `$${inputValue}`;
             }
-            calvalue[2].innerHTML = inputValue;
+
+            calvalue[2].innerHTML = `$${inputValue}`;
+
+            if (calvalue[2].innerHTML == "$NaN") {
+                calvalue[2].innerHTML = `It was not number!\nType number...`;
+            }
         })
     </script>
 </body>
