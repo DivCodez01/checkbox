@@ -13,6 +13,7 @@
 
         button {
             border: none;
+            cursor: pointer;
 
             &:nth-of-type(1) {
                 background: black;
@@ -30,15 +31,29 @@
                 color: white;
             }
         }
+
+        input {
+            padding: 10px 18px;
+        }
     </style>
 </head>
 
 <body>
-    <p>YouTube Subscribe Butoon</p>
+    <p>YouTube Subscribe Button</p>
     <button>subscribe</button>
     <p>Amazon shipping calculator</p>
     <input type="text" placeholder="Cost of order">
     <button>Calculate</button>
+
+    <script>
+        const button = document.getElementsByTagName("button");
+
+        button[0].addEventListener("click", (ev) => {
+            if (button[0].innerHTML == "subscribe") {
+                button[0].innerHTML = "subscribed"
+            }
+        })
+    </script>
 </body>
 
 </html>
