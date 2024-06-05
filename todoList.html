@@ -88,6 +88,12 @@
         button.addEventListener("click", (ev) => {
             let name = input[0].value;
             let dueDate = input[1].value;
+
+            if (name) {
+                todoElms.push({ name: name, dueDate: dueDate });
+                console.log(todoElms)
+            }
+            todoListElms(todoElms)
         })
     </script>
 </body>
