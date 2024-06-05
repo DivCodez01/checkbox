@@ -67,8 +67,12 @@
         })
 
         button[1].addEventListener("click", (ev) => {
-            let inputValue = input.value;
+            let inputValue = Number(input.value);
 
+            if (inputValue < 40) {
+                inputValue = inputValue + 10;
+                calvalue[2].innerHTML = `$${inputValue}`;
+            }
             calvalue[2].innerHTML = inputValue;
         })
     </script>
