@@ -64,8 +64,7 @@
         function todoListElms(todoList) {
             let todoListHtml = "";
             todoList.forEach((todo, index) => {
-                let name = todo.name;
-                let dueDate = todo.dueDate;
+                const { name, dueDate } = todo;
                 const html = `
                 <div>${name}</div>
                 <div>${dueDate}</div>
@@ -90,7 +89,7 @@
             let dueDate = input[1].value;
 
             if (name && dueDate) {
-                todoElms.push({ name: name, dueDate: dueDate });
+                todoElms.push({ name, dueDate });
             }
             todoListElms(todoElms)
 
