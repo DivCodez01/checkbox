@@ -29,7 +29,7 @@ async function fetchImage() {
     const pokemonSprite = document.getElementById('pokemonSprite');
 
     try {
-        const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/dittos');
+        const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
         console.log(fetchData)
 
         if (!fetchData.ok) {
@@ -37,9 +37,10 @@ async function fetchImage() {
         }
 
         const data = await fetchData.json();
-        const chooseImg = data.species
+        const chooseImg = data.sprites.back_shiny
 
-        console.log(chooseImg)
+        pokemonSprite.src = chooseImg;
+        pokemonSprite.style.display = 'block';
     }
     catch (error) {
         console.log(error)
