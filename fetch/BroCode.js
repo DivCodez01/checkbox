@@ -4,7 +4,9 @@ const pokemonSprite = document.getElementById('pokemonSprite');
 
 fetchImage()
 function fetchImage() {
-    fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    const pokemonImg = pokemonName.value.toLowerCase();
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonImg}`)
         .then(res => {
             if (!res.ok) {
                 throw Error('There\'s no image because of link');
@@ -14,10 +16,8 @@ function fetchImage() {
         })
         .then(data => {
             let imgData = data.sprites.front_default
-            console.log(imgData)
             pokemonSprite.src = imgData;
             pokemonSprite.style.display = 'block'
-            console.log(pokemonSprite)
         })
         .catch(error => console.log(error));
 }
