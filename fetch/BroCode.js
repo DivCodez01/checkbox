@@ -23,13 +23,14 @@
 // }
 
 fetchImage()
-function fetchImage() {
+async function fetchImage() {
 
     const pokemonName = document.getElementById('pokemonName');
     const pokemonSprite = document.getElementById('pokemonSprite');
 
     try {
-
+        const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+        console.log(fetchData)
     }
     catch (error) {
 
