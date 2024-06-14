@@ -1,3 +1,6 @@
+const pokemonName = document.getElementById('pokemonName');
+const pokemonSprite = document.getElementById('pokemonSprite');
+
 
 fetchImage()
 function fetchImage() {
@@ -8,6 +11,12 @@ function fetchImage() {
             }
             return res.json();
         })
-        .then(data => console.log(data))
+        .then(data => {
+            let imgData = data.sprites.front_default
+            console.log(imgData)
+            pokemonSprite.src = imgData;
+            pokemonSprite.style.display = 'block'
+            console.log(pokemonSprite)
+        })
         .catch(error => console.log(error));
 }
