@@ -28,5 +28,10 @@ function fetchImage() {
     const pokemonName = document.getElementById('pokemonName');
     const pokemonSprite = document.getElementById('pokemonSprite');
 
+    try {
 
+    }
+    catch (error) {
+
+    }
 }
