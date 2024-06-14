@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+    grid-gap: 10px;
+    margin-bottom: 16px;
+}
+
+.delete-btn {
+    background: darkred;
+}
+
+input {
+    padding: 6px;
+}
+
+button {
+    background: green;
+    color: white;
+    border: none;
+    padding: .8em;
+    cursor: pointer;
+}
