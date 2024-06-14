@@ -29,14 +29,19 @@ async function fetchImage() {
     const pokemonSprite = document.getElementById('pokemonSprite');
 
     try {
-        const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+        const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/dittos');
         console.log(fetchData)
 
-        const data = await fetchData.json()
+        if (!fetchData.ok) {
+            throw Error('You can\'t fetch that data');
+        }
+
+        const data = await fetchData.json();
         const chooseImg = data.species
+
         console.log(chooseImg)
     }
     catch (error) {
-
+        console.log(error)
     }
 }
