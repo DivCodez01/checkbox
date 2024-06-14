@@ -7,7 +7,8 @@ function fetchImage() {
     fetch('https://pokeapi.co/api/v2/pokemon/ditto')
         .then(res => {
             if (!res.ok) {
-                console.log('There\'s no image because of link')
+                throw Error('There\'s no image because of link');
+                // console.log('There\'s no image because of link');
             }
             return res.json();
         })
