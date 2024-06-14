@@ -25,11 +25,11 @@
 fetchImage()
 async function fetchImage() {
 
-    const pokemonName = document.getElementById('pokemonName');
+    const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
     const pokemonSprite = document.getElementById('pokemonSprite');
 
     try {
-        const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+        const fetchData = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         console.log(fetchData)
 
         if (!fetchData.ok) {
@@ -43,6 +43,6 @@ async function fetchImage() {
         pokemonSprite.style.display = 'block';
     }
     catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
