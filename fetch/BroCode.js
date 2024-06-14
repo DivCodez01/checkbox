@@ -31,6 +31,10 @@ async function fetchImage() {
     try {
         const fetchData = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
         console.log(fetchData)
+
+        const data = await fetchData.json()
+        const chooseImg = data.species
+        console.log(chooseImg)
     }
     catch (error) {
 
